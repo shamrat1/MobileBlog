@@ -1,21 +1,75 @@
-# Lumen PHP Framework
+# A Blogging API for mobile app developers
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
-
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Made with [Lumen](https://lumen.laravel.com)  :purple_heart: , a very lightweight [php](https://www.php.net) framework.
 
 ## Official Documentation
 
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Security Vulnerabilities
+## API Endpoints
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+returns | method | link | params
+--- | --- | --- | ---
+All Posts | GET | `~/public/api/posts` | no
+Single Post | GET | ` ~/public/api/posts/` | yes, `id`
+Update Post | PUT | `~/public/api/posts/` | yes, `id`
+Delete Post | DELETE | `~/public/api/posts/` | yes, `id`
+
+:warning: replace `~` with your host address.
+
+## All JSON Returns
+ _All Posts:_
+```json
+{
+	"data": [
+		{
+			"id": 1,
+			"title": "My First Post",
+			"body": "This is my first blog post.",
+			"tags": "doer,post,blog",
+			"created_at": "2020-04-14 13:18:00",
+			"updated_at": "2020-04-14 13:18:00"
+		},
+		{
+			"id": 2,
+			"title": "My Second Post",
+			"body": "This is my second blog post.",
+			"tags": "doer,post,blog",
+			"created_at": "2020-04-14 13:23:14",
+			"updated_at": "2020-04-14 13:23:14"
+		}
+	}
+}
+```
+ _Single Post:_
+```json
+{
+	{
+		"id": 1,
+		"title": "My First Post",
+		"body": "This is my first blog post.",
+		"tags": "doer,post,blog",
+		"created_at": "2020-04-14 13:18:00",
+		"updated_at": "2020-04-14 13:18:00"
+	}
+}
+```
+ _Update Post:_
+```json
+{
+	"message": "Post updated successfully."
+}
+```
+
+ _Delete Post:_
+```json
+{
+	"message": "Post Deleted."
+}
+```
+
+
 
 ## License
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Free for any use.
