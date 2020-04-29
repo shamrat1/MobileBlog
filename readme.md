@@ -6,6 +6,11 @@ Made with [Lumen](https://lumen.laravel.com)  :purple_heart: , a very lightweigh
 
 Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
+## Installation Guide
+
+* Steps
+    1. run command on project root directory `composer update`
+
 ## API Endpoints
 
 returns | method | link | params

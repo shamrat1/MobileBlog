@@ -11,9 +11,10 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
+        'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'body' => $faker->realText($maxNbChars = 300, $indexSize = 4),
+        'tags' => $faker->word.",".$faker->word . "," . $faker->word,
     ];
 });
