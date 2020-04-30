@@ -13,7 +13,7 @@
 
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+        'title' => $faker->sentence($nbWords = 3, $variableNbWords = true),
         'body' => $faker->realText($maxNbChars = 300, $indexSize = 4),
         'tags' => $faker->word.",".$faker->word . "," . $faker->word,
     ];
